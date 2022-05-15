@@ -4,7 +4,9 @@ import { Home } from './pages/home/Home';
 import { Hotels } from './pages/stays/Hotels';
 import { SingleHotelPage } from './pages/stays/SingleHotelPage';
 
-export const App = () => {
+interface Props {}
+
+export const App: React.FC = (props: Props) => {
   return (
     <>
       <Nav />
