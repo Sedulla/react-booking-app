@@ -1,17 +1,17 @@
 import { Logo, TopNav, NavItems, NavButton, NavContainer } from './nav.tw';
 
-export const Nav = () => {
+interface Props {}
+
+export const Nav: React.FC = (props: Props) => {
   return (
-    <>
-      <TopNav>
-        <NavContainer>
-          <Logo>booking</Logo>
-          <NavItems>
-            <NavButton>Sign Up</NavButton>
-            <NavButton>Log In</NavButton>
-          </NavItems>
-        </NavContainer>
-      </TopNav>
-    </>
+    <TopNav>
+      <NavContainer>
+        <Logo>booking</Logo>
+        <NavItems>
+          <NavButton>Sign Up</NavButton>
+          <NavButton>Log In</NavButton>
+        </NavItems>
+      </NavContainer>
+    </TopNav>
   );
 };
