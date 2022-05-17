@@ -1,5 +1,12 @@
-interface Props {}
+import { Header } from '../../components/header/Header';
+interface Props {
+  page?: React.ReactNode;
+}
 
-export const Hotels: React.FC = (props: Props) => {
-  return <div>Hotels</div>;
+export const Hotels = (props: Props) => {
+  return (
+    <>
+      <Header page="hotels" />
+    </>
+  );
 };

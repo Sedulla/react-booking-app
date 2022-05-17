@@ -5,7 +5,7 @@ export const Wrapper = tw.div`
 `;
 
 export const HeaderContainer = tw.div`
-    w-[90vw] max-w-[1023px] mt-5 mb-[99px] mx-0 
+    w-[90vw] max-w-[1023px]  
 `;
 
 export const HeaderList = tw.div`

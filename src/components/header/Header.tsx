@@ -27,9 +27,11 @@ import { format } from 'date-fns';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 
-interface Props {}
+interface Props {
+  page?: React.ReactNode;
+}
 
-export const Header = (props: Props) => {
+export const Header = ({ page }: Props) => {
   const [date, setDate] = useState([
     {
       startDate: new Date() as Date,
@@ -38,6 +40,7 @@ export const Header = (props: Props) => {
     },
   ]);
   const [show, setShow] = useState(false);
+  const [hide, setHide] = useState(false);
   const [options, setOptions] = useState({
     adult: 3 as number,
     children: 5 as number,
@@ -56,7 +59,11 @@ export const Header = (props: Props) => {
   return (
     <>
       <Wrapper>
-        <HeaderContainer>
+        <HeaderContainer
+          className={
+            page === 'hotels' ? 'mt-5 mb-0 mx-0' : 'mt-5 mb-[99px] mx-0'
+          }
+        >
           <HeaderList>
             <HeaderListItem>
               <FaHome />
@@ -72,111 +79,119 @@ export const Header = (props: Props) => {
             </HeaderListItem>
           </HeaderList>
 
-          <HeaderTitle>Some text here. and some</HeaderTitle>
-          <HeaderDescription>
-            some text here and some text here and some text here and some text
-            here and some text here and some text here
-          </HeaderDescription>
-          <HeaderButton>Sign Up / Log In</HeaderButton>
+          {page !== 'hotels' && (
+            <>
+              <HeaderTitle>Some text here and some here</HeaderTitle>
+              <HeaderDescription>
+                Some text here and some text here and some text here and some
+                text here and some text here and some text here
+              </HeaderDescription>
+              <HeaderButton>Sign Up / Log In</HeaderButton>
 
-          {/* Header Search Box */}
-          <HeaderSearchBox>
-            <HeaderSearchItem>
-              <FaHome className="text-[#9CA3AF]" />
-              <HeaderSearchInput
-                type="text"
-                placeholder="Where are you going?"
-              />
-            </HeaderSearchItem>
-            <HeaderSearchItem>
-              <FaCalendarDay className="text-[#9CA3AF]" />
-              <HeaderSearchText onClick={() => setShow(!show)}>{`${format(
-                date[0].startDate,
-                'MM/dd/yyyy'
-              )} to ${format(
-                date[0].endDate,
-                'MM/dd/yyyy'
-              )}`}</HeaderSearchText>
-              {show && (
-                <DateRange
-                  editableDateInputs={true}
-                  onChange={(item: any) => setDate([item.selection] as any)}
-                  moveRangeOnFirstSelection={false}
-                  ranges={date} // [{ startDate, endDate }]
-                  className="absolute top-[51px]"
-                />
-              )}
-            </HeaderSearchItem>
-            <HeaderSearchItem>
-              <FaHome className="text-[#9CA3AF]" />
-              <HeaderSearchText
-                onClick={() => setShow(!show)}
-              >{`${options.adult} adult • ${options.children} children • ${options.room} room`}</HeaderSearchText>
+              {/* Header Search Box */}
+              <HeaderSearchBox>
+                <HeaderSearchItem>
+                  <FaHome className="text-[#9CA3AF]" />
+                  <HeaderSearchInput
+                    type="text"
+                    placeholder="Where are you going?"
+                  />
+                </HeaderSearchItem>
+                <HeaderSearchItem>
+                  <FaCalendarDay className="text-[#9CA3AF]" />
+                  <HeaderSearchText onClick={() => setShow(!show)}>{`${format(
+                    date[0].startDate,
+                    'MM/dd/yyyy'
+                  )} to ${format(
+                    date[0].endDate,
+                    'MM/dd/yyyy'
+                  )}`}</HeaderSearchText>
+                  {show && (
+                    <DateRange
+                      editableDateInputs={true}
+                      onChange={(item: any) => setDate([item.selection] as any)}
+                      moveRangeOnFirstSelection={false}
+                      ranges={date} // [{ startDate, endDate }]
+                      className="absolute top-[51px]"
+                    />
+                  )}
+                </HeaderSearchItem>
+                <HeaderSearchItem>
+                  <FaHome className="text-[#9CA3AF]" />
+                  <HeaderSearchText
+                    onClick={() => setHide(!hide)}
+                  >{`${options.adult} adult • ${options.children} children • ${options.room} room`}</HeaderSearchText>
 
-              {show && (
-                <Options>
-                  <SearchOptionItem>
-                    <SearchOptionText>Adult</SearchOptionText>
-                    <OptionsCounterBox>
-                      <OptionCounterButton
-                        disabled={options && options.adult === 1}
-                        onClick={() => handleOptionCounter('adult', 'd')}
-                      >
-                        -
-                      </OptionCounterButton>
-                      <OptionCounterNumber>{options.adult}</OptionCounterNumber>
-                      <OptionCounterButton
-                        onClick={() => handleOptionCounter('adult', 'i')}
-                      >
-                        +
-                      </OptionCounterButton>
-                    </OptionsCounterBox>
-                  </SearchOptionItem>
+                  {hide && (
+                    <Options>
+                      <SearchOptionItem>
+                        <SearchOptionText>Adult</SearchOptionText>
+                        <OptionsCounterBox>
+                          <OptionCounterButton
+                            disabled={options && options.adult === 1}
+                            onClick={() => handleOptionCounter('adult', 'd')}
+                          >
+                            -
+                          </OptionCounterButton>
+                          <OptionCounterNumber>
+                            {options.adult}
+                          </OptionCounterNumber>
+                          <OptionCounterButton
+                            onClick={() => handleOptionCounter('adult', 'i')}
+                          >
+                            +
+                          </OptionCounterButton>
+                        </OptionsCounterBox>
+                      </SearchOptionItem>
 
-                  <SearchOptionItem>
-                    <SearchOptionText>Children</SearchOptionText>
-                    <OptionsCounterBox>
-                      <OptionCounterButton
-                        disabled={options && options.children === 0}
-                        onClick={() => handleOptionCounter('children', 'd')}
-                      >
-                        -
-                      </OptionCounterButton>
-                      <OptionCounterNumber>
-                        {options.children}
-                      </OptionCounterNumber>
-                      <OptionCounterButton
-                        onClick={() => handleOptionCounter('children', 'i')}
-                      >
-                        +
-                      </OptionCounterButton>
-                    </OptionsCounterBox>
-                  </SearchOptionItem>
+                      <SearchOptionItem>
+                        <SearchOptionText>Children</SearchOptionText>
+                        <OptionsCounterBox>
+                          <OptionCounterButton
+                            disabled={options && options.children === 0}
+                            onClick={() => handleOptionCounter('children', 'd')}
+                          >
+                            -
+                          </OptionCounterButton>
+                          <OptionCounterNumber>
+                            {options.children}
+                          </OptionCounterNumber>
+                          <OptionCounterButton
+                            onClick={() => handleOptionCounter('children', 'i')}
+                          >
+                            +
+                          </OptionCounterButton>
+                        </OptionsCounterBox>
+                      </SearchOptionItem>
 
-                  <SearchOptionItem>
-                    <SearchOptionText>Room</SearchOptionText>
-                    <OptionsCounterBox>
-                      <OptionCounterButton
-                        disabled={options && options.room === 1}
-                        onClick={() => handleOptionCounter('room', 'd')}
-                      >
-                        -
-                      </OptionCounterButton>
-                      <OptionCounterNumber>{options.room}</OptionCounterNumber>
-                      <OptionCounterButton
-                        onClick={() => handleOptionCounter('room', 'i')}
-                      >
-                        +
-                      </OptionCounterButton>
-                    </OptionsCounterBox>
-                  </SearchOptionItem>
-                </Options>
-              )}
-            </HeaderSearchItem>
-            <HeaderSearchItem>
-              <HeaderButton>Search</HeaderButton>
-            </HeaderSearchItem>
-          </HeaderSearchBox>
+                      <SearchOptionItem>
+                        <SearchOptionText>Room</SearchOptionText>
+                        <OptionsCounterBox>
+                          <OptionCounterButton
+                            disabled={options && options.room === 1}
+                            onClick={() => handleOptionCounter('room', 'd')}
+                          >
+                            -
+                          </OptionCounterButton>
+                          <OptionCounterNumber>
+                            {options.room}
+                          </OptionCounterNumber>
+                          <OptionCounterButton
+                            onClick={() => handleOptionCounter('room', 'i')}
+                          >
+                            +
+                          </OptionCounterButton>
+                        </OptionsCounterBox>
+                      </SearchOptionItem>
+                    </Options>
+                  )}
+                </HeaderSearchItem>
+                <HeaderSearchItem>
+                  <HeaderButton>Search</HeaderButton>
+                </HeaderSearchItem>
+              </HeaderSearchBox>
+            </>
+          )}
         </HeaderContainer>
       </Wrapper>
     </>
