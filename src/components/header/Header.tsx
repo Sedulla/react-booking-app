@@ -112,7 +112,7 @@ export const Header = ({ page }: Props) => {
                       onChange={(item: any) => setDate([item.selection] as any)}
                       moveRangeOnFirstSelection={false}
                       ranges={date} // [{ startDate, endDate }]
-                      className="absolute top-[51px]"
+                      className="absolute top-[51px] z-[3]"
                     />
                   )}
                 </HeaderSearchItem>

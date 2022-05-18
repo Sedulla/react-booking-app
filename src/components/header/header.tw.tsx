@@ -49,7 +49,7 @@ export const HeaderSearchText = tw.span`
 // OPTIONS
 
 export const Options = tw.div`
-    absolute top-[51px] rounded-[5px] text-[#9CA3AF] bg-white shadow-lg
+   z-[3] absolute top-[51px] rounded-[5px] text-[#9CA3AF] bg-white shadow-lg
  `;
 
 export const SearchOptionItem = tw.div`
