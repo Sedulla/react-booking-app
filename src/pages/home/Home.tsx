@@ -6,6 +6,7 @@ import { Featured } from '../../components/featured/Featured';
 import { PropertyList } from '../../components/propertyList/PropertyList';
 import { FeaturedProperties } from '../../components/featuredProperties/FeaturedProperties';
 import { Newsletter } from '../../components/newsletter/Newsletter';
+import { Footer } from '../../components/footer/Footer';
 
 interface Props {}
 
@@ -27,6 +28,7 @@ export const Home = (props: Props) => {
         <HomeTitle>Homes guests like</HomeTitle>
         <FeaturedProperties />
         <Newsletter />
+        <Footer />
       </HomeContainer>
     </>
   );

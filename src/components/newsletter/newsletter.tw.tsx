@@ -1,7 +1,7 @@
 import tw from 'twin.macro';
 
 export const MailContainer = tw.div`
-    w-[90vw] mt-1 bg-[#003580] text-white flex flex-col items-center gap-[19px] p-[51px]
+    w-[99vw] mt-1 bg-[#003580] text-white flex flex-col items-center gap-[19px] p-[51px]
 `;
 
 export const MailTitle = tw.h1`
