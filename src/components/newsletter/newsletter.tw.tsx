@@ -18,5 +18,5 @@ export const MailInput = tw.input`
 `;
 
 export const MailButton = tw.button`
-    h-[51px] bg-[#0071c2] text-white font-bold border-none rounded cursor-pointers
+    h-[51px] bg-[#0071c2] text-white font-bold border-none rounded cursor-pointer
 `;
