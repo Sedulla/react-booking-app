@@ -9,7 +9,7 @@ export const FpItem = tw.div`
 `;
 
 export const FpImage = tw.img`
-    w-[25vw] h-[39vh]
+    w-[25vw] h-[307px]
 `;
 
 export const FnName = tw.span`
