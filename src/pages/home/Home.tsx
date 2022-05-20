@@ -1,8 +1,11 @@
 import tw from 'twin.macro';
-import { Featured } from '../../components/featured/Featured';
-import { FeaturedProperties } from '../../components/featuredProperties/FeaturedProperties';
+
+// COMPONENTS
 import { Header } from '../../components/header/Header';
+import { Featured } from '../../components/featured/Featured';
 import { PropertyList } from '../../components/propertyList/PropertyList';
+import { FeaturedProperties } from '../../components/featuredProperties/FeaturedProperties';
+import { Newsletter } from '../../components/newsletter/Newsletter';
 
 interface Props {}
 
@@ -23,6 +26,7 @@ export const Home = (props: Props) => {
         <PropertyList />
         <HomeTitle>Homes guests like</HomeTitle>
         <FeaturedProperties />
+        <Newsletter />
       </HomeContainer>
     </>
   );
