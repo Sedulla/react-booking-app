@@ -6,7 +6,7 @@ export const Nav: React.FC = (props: Props) => {
   return (
     <TopNav>
       <NavContainer>
-        <Logo>booking</Logo>
+        <Logo>Booking</Logo>
         <NavItems>
           <NavButton>Sign Up</NavButton>
           <NavButton>Log In</NavButton>
