@@ -21,6 +21,7 @@ import { format } from 'date-fns';
 import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
+import { HotelsSearchItem } from './shared/HotelsSearchItem';
 
 interface Props {
   page?: React.ReactNode;
@@ -108,7 +109,16 @@ export const Hotels = (props: Props) => {
             </HotelsPageItem>
             <SearchResultButton type="button">Search</SearchResultButton>
           </HotelsPageSearch>
-          <HotelsPageResult></HotelsPageResult>
+
+          <HotelsPageResult>
+            <HotelsSearchItem />
+            <HotelsSearchItem />
+            <HotelsSearchItem />
+            <HotelsSearchItem />
+            <HotelsSearchItem />
+            <HotelsSearchItem />
+            <HotelsSearchItem />
+          </HotelsPageResult>
         </HotelsPageWrapper>
       </HotelsPageContainer>
     </>
