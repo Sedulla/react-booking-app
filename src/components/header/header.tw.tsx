@@ -30,7 +30,7 @@ export const HeaderButton = tw.button`
 
 // SEARCH
 
-export const HeaderSearchBox = tw.div`
+export const SearchBoxContainer = tw.div`
     w-[90vw] max-w-[1023px] h-[3.3rem] bg-white py-[9px] px-0 bottom-[-31px] border-[3px] border-[#febb03] border-solid flex items-center justify-around rounded-[5px] absolute 
 `;
 
@@ -48,7 +48,7 @@ export const HeaderSearchText = tw.span`
 
 // OPTIONS
 
-export const Options = tw.div`
+export const OptionsContainer = tw.div`
    z-[3] absolute top-[51px] rounded-[5px] text-[#9CA3AF] bg-white shadow-lg
  `;
 

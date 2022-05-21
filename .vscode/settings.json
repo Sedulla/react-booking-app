@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "node_modules": true,
+    "public": true,
+    "pnpm-lock.yaml": true,
+    ".gitignore": true,
+    "postcss.config.js": true,
+    "README.md": true
+  }
+}
