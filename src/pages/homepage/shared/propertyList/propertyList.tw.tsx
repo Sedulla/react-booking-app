@@ -1,11 +1,11 @@
 import tw from 'twin.macro';
 
 export const PropertyListContainer = tw.div`
-    flex justify-between gap-[19px] w-[90vw] max-w-[1023px] md:
+    flex justify-between gap-[19px] w-screen max-w-5xl
 `;
 
 export const PropertyListItem = tw.div`
-overflow-hidden rounded-[9px] cursor-pointer flex-[1]
+    overflow-hidden rounded-[9px] cursor-pointer flex-[1]
 `;
 
 export const PropertyListImage = tw.img`

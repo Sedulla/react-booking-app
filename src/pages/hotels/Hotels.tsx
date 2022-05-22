@@ -37,7 +37,7 @@ export const Hotels = (props: Props) => {
 
   return (
     <>
-      <Header page="hotels" />
+      <Header />
       <HotelsPageContainer>
         <HotelsPageWrapper>
           <HotelsPageSearch>

@@ -21,7 +21,7 @@ export const Header = ({ page }: Props) => {
       <Wrapper>
         <HeaderContainer
           className={
-            page === 'hotels' ? 'mt-5 mb-0 mx-0' : 'mt-5 mb-[99px] mx-0'
+            page === 'homepage' ? 'mt-5 mb-[99px] mx-0' : 'mt-5 mb-0 mx-0'
           }
         >
           <HeaderList>
@@ -39,7 +39,7 @@ export const Header = ({ page }: Props) => {
             </HeaderListItem>
           </HeaderList>
 
-          {page !== 'hotels' && (
+          {page === 'homepage' && (
             <>
               <HeaderTitle>Some text here and some here</HeaderTitle>
               <HeaderDescription>
