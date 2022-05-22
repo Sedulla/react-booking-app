@@ -4,7 +4,11 @@ module.exports = {
   },
   style: {
     postOptions: {
-      plugins: [require('tailwindcss'), require('autoprefixer')],
+      plugins: [
+        require('tailwindcss')('./tailwind.config'),
+        require('autoprefixer'),
+        require('postcss'),
+      ],
     },
   },
 };

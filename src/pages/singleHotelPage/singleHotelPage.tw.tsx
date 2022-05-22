@@ -73,3 +73,17 @@ export const HotelPriceText = tw.span`
 export const HotelPriceValue = tw.h3`
     font-light
 `;
+
+// ======== SLIDER ======== //
+
+export const Slider = tw.div`
+    sticky top-0 left-0 w-[100vw] h-[100vh] flex items-center z-[999] bg-[rgba(0,0,0,0.3)]
+`;
+
+export const SliderImageWrapper = tw.div`
+    w-screen h-screen flex justify-center items-center
+`;
+
+export const SliderSingleImage = tw.img`
+    w-[999px] h-[79vh]
+`;

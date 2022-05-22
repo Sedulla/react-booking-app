@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Footer } from './components/footer/Footer';
 import { Nav } from './components/nav/Nav';
@@ -10,7 +9,6 @@ import { SingleHotelPage } from './pages/singleHotelPage/SingleHotelPage';
 interface Props {}
 
 export const App: React.FC = (props: Props) => {
-
   return (
     <>
       <Nav />
