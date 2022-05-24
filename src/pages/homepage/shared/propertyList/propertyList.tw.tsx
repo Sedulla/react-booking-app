@@ -5,7 +5,7 @@ export const PropertyListContainer = tw.div`
 `;
 
 export const PropertyListItem = tw.div`
-    overflow-hidden rounded-[9px] cursor-pointer flex-[1]
+    overflow-hidden rounded-lg cursor-pointer flex-[1]
 `;
 
 export const PropertyListImage = tw.img`
@@ -16,9 +16,9 @@ export const PropertyListTitles = tw.div`
 `;
 
 export const PropertyListTitleBig = tw.h1`
-    text-[17px]    
+    text-lg   
 `;
 
 export const PropertyListTitleSmall = tw.h3`
-    text-[15px] font-light
+    text-sm font-light
 `;

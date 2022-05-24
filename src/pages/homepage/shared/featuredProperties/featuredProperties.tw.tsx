@@ -1,15 +1,15 @@
 import tw from 'twin.macro';
 
 export const FpContainer = tw.div`
-    flex justify-between gap-[19px] w-[90vw] max-w-[1023px] md:
+    flex justify-between gap-3 w-screen max-w-5xl
 `;
 
 export const FpItem = tw.div`
-    flex-[1] gap-[9px] flex flex-col
+    flex flex-col flex-[1] gap-3
 `;
 
 export const FpImage = tw.img`
-    w-[25vw] h-[307px]
+    w-[25vw] h-[301px] object-cover
 `;
 
 export const FnName = tw.span`
@@ -27,7 +27,7 @@ export const FnPrice = tw.span`
 export const FpRating = tw.div``;
 
 export const FpRatingStar = tw.button`
-    bg-[#003580] text-white border-none p-[3px] mr-[9px] font-bold
+    bg-[#003580] text-white border-none p-1 mr-3 font-bold
 `;
 
 export const FpRatingText = tw.span`

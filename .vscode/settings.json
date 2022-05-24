@@ -3,7 +3,6 @@
     "node_modules": true,
     "pnpm-lock.yaml": true,
     ".gitignore": true,
-    "postcss.config.js": true,
     "README.md": true
   }
 }

@@ -1,11 +1,11 @@
 import tw from 'twin.macro';
 
 export const FeaturedContainer = tw.div`
-    flex justify-between gap-[19px] w-[90vw] max-w-[1023px] z-[1]
+    flex justify-between w-screen max-w-5xl z-[1]
 `;
 
 export const FeaturedItem = tw.div`
-overflow-hidden rounded-[9px] relative text-white h-[250px]
+    overflow-hidden rounded-lg relative text-white h-[251px]
 `;
 
 export const FeaturedImage = tw.img`

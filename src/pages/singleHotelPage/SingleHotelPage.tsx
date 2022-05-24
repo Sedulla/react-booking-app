@@ -134,7 +134,6 @@ export const SingleHotelPage: React.FC = (props: Props) => {
           </HotelPageDetails>
         </HotelPageContainer>
       </HotelPageWrapper>
-      <div className="bg-black text-3xl">abcde</div>
     </>
   );
 };

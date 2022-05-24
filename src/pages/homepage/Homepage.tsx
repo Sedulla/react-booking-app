@@ -9,7 +9,7 @@ import { FeaturedProperties } from './shared/featuredProperties/FeaturedProperti
 interface Props {}
 
 const HomePageContainer = tw.div`
-  flex flex-col mt-[51px] items-center gap-[31px]
+  flex flex-col items-center mt-[51px] gap-[31px]
 `;
 
 const HomePageTitle = tw.h1`
@@ -18,7 +18,7 @@ const HomePageTitle = tw.h1`
 export const Homepage = (props: Props) => {
   return (
     <>
-      <Header page='homepage' />
+      <Header page="homepage" />
       <HomePageContainer>
         <Featured />
         <HomePageTitle>Browse by property type</HomePageTitle>

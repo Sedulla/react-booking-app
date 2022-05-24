@@ -5,7 +5,7 @@ export const Wrapper = tw.div`
 `;
 
 export const HeaderContainer = tw.div`
-    w-[90vw] max-w-[1023px]
+    w-screen max-w-5xl
 `;
 
 export const HeaderList = tw.div`
@@ -13,7 +13,7 @@ export const HeaderList = tw.div`
 `;
 
 export const HeaderListItem = tw.div`
-    flex items-center gap-[9px]
+    flex items-center gap-3
 `;
 
 export const ListItemText = tw.span``;
@@ -21,21 +21,21 @@ export const ListItemText = tw.span``;
 export const HeaderTitle = tw.h1``;
 
 export const HeaderDescription = tw.div`
-    my-[19px] mx-0
+    my-5 mx-0
 `;
 
 export const HeaderButton = tw.button`
-    bg-[#0071c2] text-white font-bold p-[7px] border-none cursor-pointer
+    bg-[#0071c2] text-white font-bold p-1.5 border-none cursor-pointer
 `;
 
 // SEARCH
 
 export const SearchBoxContainer = tw.div`
-    w-[90vw] max-w-[1023px] h-[3.3rem] bg-white py-[9px] px-0 bottom-[-31px] border-[3px] border-[#febb03] border-solid flex items-center justify-around rounded-[5px] absolute 
+    w-screen max-w-5xl h-[3.3rem] bg-white py-3 px-0 bottom-[-31px] border-[3px] border-[#febb03] border-solid flex items-center justify-around rounded absolute 
 `;
 
 export const HeaderSearchItem = tw.div`
-    flex items-center gap-[9px]
+    flex items-center gap-3
 `;
 
 export const HeaderSearchInput = tw.input`
@@ -49,7 +49,7 @@ export const HeaderSearchText = tw.span`
 // OPTIONS
 
 export const OptionsContainer = tw.div`
-   z-[3] absolute top-[51px] rounded-[5px] text-[#9CA3AF] bg-white shadow-lg
+   z-[3] absolute top-[51px] rounded text-[#9CA3AF] bg-white shadow-lg
  `;
 
 export const SearchOptionItem = tw.div`
@@ -60,7 +60,7 @@ export const SearchOptionText = tw.span`
 `;
 
 export const OptionsCounterBox = tw.div`
-    flex items-center text-black text-[13px] gap-[9px]
+    flex items-center text-black text-sm gap-3
 `;
 
 export const OptionCounterButton = tw.button`
