@@ -15,5 +15,5 @@ export const Logo = tw.span`
 export const NavItems = tw.div``;
 
 export const NavButton = tw.button`
-    ml-5 border-none py-3 px-5 cursor-pointer bg-white text-[#0071c2] text-3
+    ml-5 border-none py-3 px-5 cursor-pointer bg-white text-[#0071c2] text-sm
 `;
