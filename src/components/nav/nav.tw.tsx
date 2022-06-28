@@ -5,7 +5,7 @@ export const TopNav = tw.div`
 `;
 
 export const NavContainer = tw.div`
-    w-[75vw] max-w-[1064px] text-white flex items-center justify-between
+    w-[75vw] max-w-5xl text-white flex items-center justify-between
 `;
 
 export const Logo = tw.span`
@@ -15,5 +15,5 @@ export const Logo = tw.span`
 export const NavItems = tw.div``;
 
 export const NavButton = tw.button`
-    ml-5 border-none py-[7px] px-[15px] cursor-pointer bg-white text-[#0071c2] text-[15px]
+    ml-5 border-none py-3 px-5 cursor-pointer bg-white text-[#0071c2] text-3
 `;

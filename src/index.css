@@ -13,4 +13,13 @@
 }
 
 @tailwind components;
+
+@layer components {
+  .link {
+    text-decoration: none;
+    color: inherit;
+    /* 3 */
+  }
+}
+
 @tailwind utilities;
