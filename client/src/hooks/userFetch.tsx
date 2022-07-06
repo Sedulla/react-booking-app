@@ -19,6 +19,7 @@ export const useFetchData = (url: any) => {
       }
       setLoading(false);
     };
+    fetchData();
   }, [url]);
 
   const reFetchData = async () => {

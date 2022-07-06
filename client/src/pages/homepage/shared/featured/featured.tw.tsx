@@ -4,7 +4,7 @@ export const FeaturedContainer = tw.div`
     flex justify-between w-screen max-w-5xl z-[1]
 `;
 
-export const FeaturedItem = tw.div`
+export const FeaturedItemContainer = tw.div`
     overflow-hidden rounded-lg relative text-white h-[251px]
 `;
 

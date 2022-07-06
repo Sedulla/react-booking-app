@@ -47,5 +47,6 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(process.env.PORT || 7777, () => {
-  console.log('Connected to backend!', app.settings.env);
+  connect()
+  console.log('Connected to backend!');
 });

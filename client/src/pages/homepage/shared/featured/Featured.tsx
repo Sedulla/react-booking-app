@@ -1,41 +1,38 @@
-import {
-  FeaturedContainer,
-  FeaturedImage,
-  FeaturedItem,
-  FeaturedTitleBig,
-  FeaturedTitles,
-  FeaturedTitleSmall,
-} from './featured.tw';
+import { FeaturedItem } from './FeaturedItem';
+import { FeaturedContainer } from './featured.tw';
+import { useFetchData } from '../../../../hooks/userFetch';
 
 interface Props {}
 
 export const Featured = (props: Props) => {
+  const { data, loading, error } = useFetchData(
+    '/hotels/countByCity?cities=City1,City2,City3'
+  );
+
   return (
     <>
       <FeaturedContainer>
-        <FeaturedItem>
-          <FeaturedImage src="https://i.ibb.co/XsdmR2c/3.png" />
-          <FeaturedTitles>
-            <FeaturedTitleBig>Makkah</FeaturedTitleBig>
-            <FeaturedTitleSmall>properties</FeaturedTitleSmall>
-          </FeaturedTitles>
-        </FeaturedItem>
-
-        <FeaturedItem>
-          <FeaturedImage src="https://i.ibb.co/XsdmR2c/3.png" />
-          <FeaturedTitles>
-            <FeaturedTitleBig>Madina</FeaturedTitleBig>
-            <FeaturedTitleSmall>properties</FeaturedTitleSmall>
-          </FeaturedTitles>
-        </FeaturedItem>
-
-        <FeaturedItem>
-          <FeaturedImage src="https://i.ibb.co/XsdmR2c/3.png" />
-          <FeaturedTitles>
-            <FeaturedTitleBig>Quds</FeaturedTitleBig>
-            <FeaturedTitleSmall>properties</FeaturedTitleSmall>
-          </FeaturedTitles>
-        </FeaturedItem>
+        {loading ? (
+          'Loading please wait...'
+        ) : (
+          <>
+            <FeaturedItem
+              city="City1"
+              cityViewImage="https://i.ibb.co/XsdmR2c/3.png"
+              listedPropertyCount={data[0]}
+            />
+            <FeaturedItem
+              city="City2"
+              cityViewImage="https://i.ibb.co/XsdmR2c/3.png"
+              listedPropertyCount={data[1]}
+            />
+            <FeaturedItem
+              city="City3"
+              cityViewImage="https://i.ibb.co/XsdmR2c/3.png"
+              listedPropertyCount={data[2]}
+            />
+          </>
+        )}
       </FeaturedContainer>
     </>
   );
